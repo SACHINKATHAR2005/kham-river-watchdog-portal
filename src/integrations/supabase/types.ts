@@ -32,45 +32,66 @@ export type Database = {
       }
       stations: {
         Row: {
+          contact_person: string | null
           created_at: string
+          description: string | null
           frequency: string
           id: string
+          installation_date: string | null
           latitude: number | null
           longitude: number | null
           name: string
           number: string
           position_x: number | null
           position_y: number | null
+          status: string | null
+          updated_at: string | null
         }
         Insert: {
+          contact_person?: string | null
           created_at?: string
+          description?: string | null
           frequency: string
           id?: string
+          installation_date?: string | null
           latitude?: number | null
           longitude?: number | null
           name: string
           number: string
           position_x?: number | null
           position_y?: number | null
+          status?: string | null
+          updated_at?: string | null
         }
         Update: {
+          contact_person?: string | null
           created_at?: string
+          description?: string | null
           frequency?: string
           id?: string
+          installation_date?: string | null
           latitude?: number | null
           longitude?: number | null
           name?: string
           number?: string
           position_x?: number | null
           position_y?: number | null
+          status?: string | null
+          updated_at?: string | null
         }
         Relationships: []
       }
       water_quality: {
         Row: {
+          collector_name: string | null
+          conductivity: number | null
           created_at: string
+          dissolved_oxygen: number | null
           ec: number
           id: string
+          measurement_date: string | null
+          measurement_time: string | null
+          notes: string | null
           ph: number
           station_id: string
           tds: number
@@ -79,9 +100,15 @@ export type Database = {
           turbidity: number
         }
         Insert: {
+          collector_name?: string | null
+          conductivity?: number | null
           created_at?: string
+          dissolved_oxygen?: number | null
           ec: number
           id?: string
+          measurement_date?: string | null
+          measurement_time?: string | null
+          notes?: string | null
           ph: number
           station_id: string
           tds: number
@@ -90,9 +117,15 @@ export type Database = {
           turbidity: number
         }
         Update: {
+          collector_name?: string | null
+          conductivity?: number | null
           created_at?: string
+          dissolved_oxygen?: number | null
           ec?: number
           id?: string
+          measurement_date?: string | null
+          measurement_time?: string | null
+          notes?: string | null
           ph?: number
           station_id?: string
           tds?: number
